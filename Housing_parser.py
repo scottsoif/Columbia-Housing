@@ -34,6 +34,6 @@ if __name__ == '__main__':
     housing_number = 2266   # input your housing number
     h_idx = getCol(housing, 2).index(housing_number)  # our housing number index
 
-    getHousStats(1,0,0,20)  # same as getHousStats()
+    getHousStats(1,0,0,30)  # same as getHousStats()
 
 
