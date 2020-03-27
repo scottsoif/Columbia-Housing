@@ -15,21 +15,20 @@ def getCol(arr, idx):
 
 load_doc()
 housing_number = 2266   # input your housing number
-h_idx = getCol(housing, 2).index(housing_number)  # our housing number
+h_idx = getCol(housing, 2).index(housing_number)  # our housing number index
 
-def getHousStats():
+def getHousStats(eight=True, nine=False, ten=False):
+    # usage: getHousStats() will return groups of 8 members before you
+    #        getHousStats(0,1,1) returns groups of 9 or 10 members
+    #        getHousStats(0,1,0) groups with only 9 members and so on
     tally = 0;
-    for row in housing[:h_idx]:
-        if row[0] <= 30 and row[1]>=8:
-            print(row)
+    for g in housing[:h_idx]:  # g stands for group
+        if (g[1]==8 and eight) or (g[1]==9 and nine) or (g[1]==10 and ten):
+            print(g)
             tally+=1
-    print(tally)
+    print("\n{}  groups before you".format(tally) )
+
     
-tally = 0;
-for row in housing[:h_idx]:
-    if row[0] <= 30 and row[1]>=8:
-        print(row)
-        tally+=1          
-print(tally)
+getHousStats() 
 
 
