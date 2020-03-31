@@ -37,4 +37,4 @@ if __name__ == '__main__':
     print("Groups of 8,9,10:")
     getHousStats((8,9,10),20)  # same as getHousStats()
     print("\n\nGroups of 5:")
-    getHousStats((5),20)
+    getHousStats([5],20)
