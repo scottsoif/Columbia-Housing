@@ -33,7 +33,8 @@ if __name__ == '__main__':
     load_doc()
     housing_number = 2266   # input your housing number
     h_idx = getCol(housing, 2).index(housing_number)  # our housing number index
-
+    
+    print("Groups of 8,9,10:")
     getHousStats((8,9,10),20)  # same as getHousStats()
-
-
+    print("\n\nGroups of 5:")
+    getHousStats((5),20)
